@@ -1,8 +1,15 @@
+import createMiddleware from 'next-intl/middleware'
 import { createServerClient } from '@supabase/ssr'
 import { NextResponse, type NextRequest } from 'next/server'
+import { routing } from '@/i18n/routing'
+
+const intlMiddleware = createMiddleware(routing)
 
 export async function middleware(request: NextRequest) {
-  let response = NextResponse.next({
+  // Handle intl routing first
+  const intlResponse = intlMiddleware(request)
+
+  let response = intlResponse || NextResponse.next({
     request: {
       headers: request.headers,
     },
@@ -41,7 +48,8 @@ export async function middleware(request: NextRequest) {
   // Protect dashboard routes
   if (request.nextUrl.pathname.includes('/dashboard')) {
     if (!user) {
-      const redirectUrl = new URL('/auth/login', request.url)
+      const locale = request.nextUrl.pathname.split('/')[1] || 'en'
+      const redirectUrl = new URL(`/${locale}/auth/login`, request.url)
       redirectUrl.searchParams.set('redirect', request.nextUrl.pathname)
       return NextResponse.redirect(redirectUrl)
     }

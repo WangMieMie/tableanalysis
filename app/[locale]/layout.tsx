@@ -1,7 +1,7 @@
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations } from 'next-intl/server'
 import { notFound } from 'next/navigation'
-import { locales } from '@/i18n/request'
+import { routing } from '@/i18n/routing'
 import { Inter } from 'next/font/google'
 import { Metadata } from 'next'
 import '@/app/globals.css'
@@ -9,14 +9,15 @@ import '@/app/globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }))
+  return routing.locales.map((locale) => ({ locale }))
 }
 
 export async function generateMetadata({
-  params: { locale }
+  params
 }: {
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }): Promise<Metadata> {
+  const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'metadata' })
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tableanalysis.com'
@@ -68,12 +69,13 @@ export async function generateMetadata({
 
 export default async function LocaleLayout({
   children,
-  params: { locale }
+  params
 }: {
   children: React.ReactNode
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }) {
-  if (!locales.includes(locale as any)) {
+  const { locale } = await params
+  if (!routing.locales.includes(locale as any)) {
     notFound()
   }
 
