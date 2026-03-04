@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__web-reader__webReader",
+      "WebFetch(domain:numiqo.com)",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__query-docs",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir=false --import-alias=\"@/*\" --use-npm --no-git)",
+      "Bash(node --version)",
+      "Bash(npm --version)",
+      "Bash(source ~/.nvm/nvm.sh)",
+      "Bash(nvm list)",
+      "Bash(nvm use 22.22.0)",
+      "Bash(npm install)",
+      "Bash(npm run build)",
+      "Bash(nvm use 18.19.1)",
+      "Bash(git init)",
+      "Bash(git branch -m main)",
+      "Bash(git add .)"
+    ]
+  }
+}

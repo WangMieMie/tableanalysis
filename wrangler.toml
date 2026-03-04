@@ -1,0 +1,29 @@
+# Cloudflare Workers configuration
+# For deployment with Cloudflare Pages/Workers
+
+name = "tableanalysis"
+main = ".next/server/app/worker.js"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Environment variables (set these in Cloudflare dashboard)
+# [vars]
+# NEXT_PUBLIC_SUPABASE_URL = ""
+# NEXT_PUBLIC_SUPABASE_ANON_KEY = ""
+
+# For local development with wrangler
+[dev]
+port = 8787
+local_protocol = "http"
+
+# Production settings
+[env.production]
+routes = [
+  { pattern = "tableanalysis.com/*", zone_name = "tableanalysis.com" },
+]
+
+# Staging settings
+[env.staging]
+routes = [
+  { pattern = "staging.tableanalysis.com/*", zone_name = "tableanalysis.com" },
+]

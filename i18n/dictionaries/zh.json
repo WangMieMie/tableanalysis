@@ -1,0 +1,241 @@
+{
+  "metadata": {
+    "title": "TableAnalysis - AI驱动的数据分析平台",
+    "description": "强大的表格数据分析平台，提供AI智能洞察、数据可视化、数据透视等功能。上传CSV或Excel文件即可获得即时分析。",
+    "keywords": "数据分析, 电子表格, CSV, Excel, AI分析, 数据可视化, 数据透视, 商业智能, 分析工具"
+  },
+  "common": {
+    "appName": "TableAnalysis",
+    "loading": "加载中...",
+    "error": "发生错误",
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "删除",
+    "edit": "编辑",
+    "create": "创建",
+    "search": "搜索",
+    "noData": "暂无数据",
+    "confirm": "确认",
+    "back": "返回"
+  },
+  "nav": {
+    "home": "首页",
+    "features": "功能",
+    "pricing": "定价",
+    "login": "登录",
+    "signup": "注册",
+    "dashboard": "控制台",
+    "tables": "我的表格",
+    "settings": "设置",
+    "logout": "退出登录"
+  },
+  "landing": {
+    "hero": {
+      "title": "AI驱动的数据分析",
+      "subtitle": "上传、分析、可视化，让AI为您的表格数据提供洞察。除非您主动分享，数据不会离开您的浏览器。",
+      "cta": "免费开始分析",
+      "secondaryCta": "查看定价"
+    },
+    "features": {
+      "title": "强大功能",
+      "subtitle": "理解数据所需的一切",
+      "upload": {
+        "title": "轻松导入",
+        "description": "上传CSV或Excel文件，数据保留在您的浏览器中。"
+      },
+      "analyze": {
+        "title": "智能分析",
+        "description": "即时获取统计数据、摘要和数据质量洞察。"
+      },
+      "visualize": {
+        "title": "精美图表",
+        "description": "点击几下即可创建出色的可视化效果。"
+      },
+      "ai": {
+        "title": "AI洞察",
+        "description": "让AI分析您的数据并提供可操作的建议。"
+      },
+      "pivot": {
+        "title": "数据透视",
+        "description": "使用强大的透视功能切分和分析数据。"
+      },
+      "privacy": {
+        "title": "隐私优先",
+        "description": "除非您明确分享，数据永远不会离开您的设备。"
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "欢迎回来",
+      "subtitle": "登录您的账户",
+      "email": "邮箱",
+      "password": "密码",
+      "submit": "登录",
+      "forgotPassword": "忘记密码？",
+      "noAccount": "还没有账户？",
+      "signup": "注册"
+    },
+    "signup": {
+      "title": "创建账户",
+      "subtitle": "免费开始",
+      "email": "邮箱",
+      "password": "密码",
+      "confirmPassword": "确认密码",
+      "submit": "创建账户",
+      "hasAccount": "已有账户？",
+      "login": "登录"
+    }
+  },
+  "dashboard": {
+    "title": "控制台",
+    "welcome": "欢迎回来",
+    "recentTables": "最近的表格",
+    "quickActions": "快捷操作",
+    "newTable": "新建表格",
+    "uploadFile": "上传文件",
+    "enterManually": "手动输入数据"
+  },
+  "table": {
+    "title": "表格编辑器",
+    "addRow": "添加行",
+    "addColumn": "添加列",
+    "deleteRow": "删除行",
+    "deleteColumn": "删除列",
+    "renameColumn": "重命名列",
+    "columnType": "列类型",
+    "types": {
+      "text": "文本",
+      "number": "数字",
+      "date": "日期",
+      "boolean": "布尔值"
+    },
+    "import": {
+      "title": "导入数据",
+      "dragDrop": "拖放文件到此处，或点击选择",
+      "supportedFormats": "支持格式：CSV, Excel (.xlsx, .xls)",
+      "preview": "预览",
+      "import": "导入"
+    },
+    "export": {
+      "title": "导出",
+      "csv": "导出为CSV",
+      "excel": "导出为Excel"
+    }
+  },
+  "analysis": {
+    "title": "分析",
+    "statistics": {
+      "title": "统计",
+      "count": "计数",
+      "sum": "求和",
+      "average": "平均值",
+      "min": "最小值",
+      "max": "最大值",
+      "median": "中位数",
+      "stdDev": "标准差"
+    },
+    "charts": {
+      "title": "图表",
+      "bar": "柱状图",
+      "line": "折线图",
+      "pie": "饼图",
+      "scatter": "散点图",
+      "selectXAxis": "选择X轴",
+      "selectYAxis": "选择Y轴",
+      "selectGroup": "分组依据"
+    },
+    "pivot": {
+      "title": "数据透视",
+      "rows": "行",
+      "columns": "列",
+      "values": "值",
+      "aggregation": "聚合方式"
+    },
+    "ai": {
+      "title": "AI分析",
+      "generate": "生成AI报告",
+      "generating": "正在生成分析...",
+      "disclaimer": "您的数据样本（前100行）将发送给AI进行分析。我们重视您的隐私。",
+      "overview": "概览",
+      "quality": "数据质量",
+      "trends": "趋势",
+      "recommendations": "建议"
+    }
+  },
+  "pricing": {
+    "title": "简单透明的定价",
+    "subtitle": "免费开始，按需升级",
+    "monthly": "月付",
+    "yearly": "年付",
+    "savePercent": "节省20%",
+    "plans": {
+      "free": {
+        "name": "免费版",
+        "price": "$0",
+        "period": "永久免费",
+        "description": "试用首选",
+        "features": [
+          "3个数据集",
+          "每个数据集100行",
+          "基础统计",
+          "每月5次AI分析",
+          "导出为CSV"
+        ],
+        "cta": "开始使用"
+      },
+      "pro": {
+        "name": "专业版",
+        "price": "$19",
+        "period": "/月",
+        "description": "适合个人和小团队",
+        "features": [
+          "无限数据集",
+          "每个数据集10,000行",
+          "高级统计和图表",
+          "无限AI分析",
+          "导出为Excel和CSV",
+          "优先支持"
+        ],
+        "cta": "开始专业版试用"
+      },
+      "enterprise": {
+        "name": "企业版",
+        "price": "$99",
+        "period": "/月",
+        "description": "适合大型团队和组织",
+        "features": [
+          "专业版所有功能",
+          "每个数据集100,000行",
+          "团队协作",
+          "自定义集成",
+          "专属支持",
+          "SLA保证"
+        ],
+        "cta": "联系销售"
+      }
+    }
+  },
+  "settings": {
+    "title": "设置",
+    "profile": {
+      "title": "个人资料",
+      "email": "邮箱",
+      "name": "姓名"
+    },
+    "subscription": {
+      "title": "订阅",
+      "currentPlan": "当前计划",
+      "billingCycle": "计费周期",
+      "nextBilling": "下次计费日期",
+      "manage": "管理订阅",
+      "upgrade": "升级计划"
+    },
+    "usage": {
+      "title": "使用量",
+      "datasets": "数据集",
+      "aiAnalysis": "AI分析",
+      "thisMonth": "本月"
+    }
+  }
+}

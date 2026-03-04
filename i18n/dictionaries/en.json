@@ -1,0 +1,241 @@
+{
+  "metadata": {
+    "title": "TableAnalysis - Analyze Your Data with AI",
+    "description": "A powerful table data analysis platform with AI-powered insights, visualization, pivot tables, and more. Upload CSV or Excel files and get instant analysis.",
+    "keywords": "data analysis, spreadsheet, CSV, Excel, AI analysis, data visualization, pivot table, business intelligence, analytics tool"
+  },
+  "common": {
+    "appName": "TableAnalysis",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "search": "Search",
+    "noData": "No data available",
+    "confirm": "Confirm",
+    "back": "Back"
+  },
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "pricing": "Pricing",
+    "login": "Login",
+    "signup": "Sign Up",
+    "dashboard": "Dashboard",
+    "tables": "My Tables",
+    "settings": "Settings",
+    "logout": "Logout"
+  },
+  "landing": {
+    "hero": {
+      "title": "Analyze Your Data with AI",
+      "subtitle": "Upload, analyze, visualize, and get AI-powered insights for your spreadsheet data. No data leaves your browser unless you want it to.",
+      "cta": "Start Analyzing Free",
+      "secondaryCta": "View Pricing"
+    },
+    "features": {
+      "title": "Powerful Features",
+      "subtitle": "Everything you need to understand your data",
+      "upload": {
+        "title": "Easy Import",
+        "description": "Upload CSV or Excel files. Your data stays in your browser."
+      },
+      "analyze": {
+        "title": "Smart Analysis",
+        "description": "Get instant statistics, summaries, and data quality insights."
+      },
+      "visualize": {
+        "title": "Beautiful Charts",
+        "description": "Create stunning visualizations with a few clicks."
+      },
+      "ai": {
+        "title": "AI Insights",
+        "description": "Let AI analyze your data and provide actionable recommendations."
+      },
+      "pivot": {
+        "title": "Pivot Tables",
+        "description": "Slice and dice your data with powerful pivot functionality."
+      },
+      "privacy": {
+        "title": "Privacy First",
+        "description": "Your data never leaves your device unless you explicitly share it."
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome back",
+      "subtitle": "Sign in to your account",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign In",
+      "forgotPassword": "Forgot password?",
+      "noAccount": "Don't have an account?",
+      "signup": "Sign up"
+    },
+    "signup": {
+      "title": "Create account",
+      "subtitle": "Get started for free",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "submit": "Create Account",
+      "hasAccount": "Already have an account?",
+      "login": "Sign in"
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome back",
+    "recentTables": "Recent Tables",
+    "quickActions": "Quick Actions",
+    "newTable": "New Table",
+    "uploadFile": "Upload File",
+    "enterManually": "Enter Data Manually"
+  },
+  "table": {
+    "title": "Table Editor",
+    "addRow": "Add Row",
+    "addColumn": "Add Column",
+    "deleteRow": "Delete Row",
+    "deleteColumn": "Delete Column",
+    "renameColumn": "Rename Column",
+    "columnType": "Column Type",
+    "types": {
+      "text": "Text",
+      "number": "Number",
+      "date": "Date",
+      "boolean": "Boolean"
+    },
+    "import": {
+      "title": "Import Data",
+      "dragDrop": "Drag and drop your file here, or click to browse",
+      "supportedFormats": "Supported formats: CSV, Excel (.xlsx, .xls)",
+      "preview": "Preview",
+      "import": "Import"
+    },
+    "export": {
+      "title": "Export",
+      "csv": "Export as CSV",
+      "excel": "Export as Excel"
+    }
+  },
+  "analysis": {
+    "title": "Analysis",
+    "statistics": {
+      "title": "Statistics",
+      "count": "Count",
+      "sum": "Sum",
+      "average": "Average",
+      "min": "Minimum",
+      "max": "Maximum",
+      "median": "Median",
+      "stdDev": "Standard Deviation"
+    },
+    "charts": {
+      "title": "Charts",
+      "bar": "Bar Chart",
+      "line": "Line Chart",
+      "pie": "Pie Chart",
+      "scatter": "Scatter Plot",
+      "selectXAxis": "Select X-Axis",
+      "selectYAxis": "Select Y-Axis",
+      "selectGroup": "Group By"
+    },
+    "pivot": {
+      "title": "Pivot Table",
+      "rows": "Rows",
+      "columns": "Columns",
+      "values": "Values",
+      "aggregation": "Aggregation"
+    },
+    "ai": {
+      "title": "AI Analysis",
+      "generate": "Generate AI Report",
+      "generating": "Generating analysis...",
+      "disclaimer": "Your data sample (first 100 rows) will be sent to our AI for analysis. Your privacy is important to us.",
+      "overview": "Overview",
+      "quality": "Data Quality",
+      "trends": "Trends",
+      "recommendations": "Recommendations"
+    }
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "Start free, upgrade when you need more",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "savePercent": "Save 20%",
+    "plans": {
+      "free": {
+        "name": "Free",
+        "price": "$0",
+        "period": "forever",
+        "description": "Perfect for trying out",
+        "features": [
+          "3 datasets",
+          "100 rows per dataset",
+          "Basic statistics",
+          "5 AI analyses/month",
+          "Export to CSV"
+        ],
+        "cta": "Get Started"
+      },
+      "pro": {
+        "name": "Pro",
+        "price": "$19",
+        "period": "/month",
+        "description": "For individuals and small teams",
+        "features": [
+          "Unlimited datasets",
+          "10,000 rows per dataset",
+          "Advanced statistics & charts",
+          "Unlimited AI analyses",
+          "Export to Excel & CSV",
+          "Priority support"
+        ],
+        "cta": "Start Pro Trial"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "$99",
+        "period": "/month",
+        "description": "For large teams and organizations",
+        "features": [
+          "Everything in Pro",
+          "100,000 rows per dataset",
+          "Team collaboration",
+          "Custom integrations",
+          "Dedicated support",
+          "SLA guarantee"
+        ],
+        "cta": "Contact Sales"
+      }
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "profile": {
+      "title": "Profile",
+      "email": "Email",
+      "name": "Name"
+    },
+    "subscription": {
+      "title": "Subscription",
+      "currentPlan": "Current Plan",
+      "billingCycle": "Billing Cycle",
+      "nextBilling": "Next Billing Date",
+      "manage": "Manage Subscription",
+      "upgrade": "Upgrade Plan"
+    },
+    "usage": {
+      "title": "Usage",
+      "datasets": "Datasets",
+      "aiAnalysis": "AI Analyses",
+      "thisMonth": "this month"
+    }
+  }
+}
