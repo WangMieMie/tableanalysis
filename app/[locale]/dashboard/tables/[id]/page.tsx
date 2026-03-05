@@ -3,17 +3,14 @@
 import { useState, useEffect } from 'react'
 import { useTableData } from '@/hooks/use-table-data'
 import { TableEditor } from '@/components/table/table-editor'
-import { StatisticsPanel } from '@/components/analysis/statistics-panel'
-import { ChartBuilder } from '@/components/charts/chart-builder'
-import { PivotTable } from '@/components/analysis/pivot-table'
-import { AIAnalyzer } from '@/components/analysis/ai-analyzer'
+import { AnalysisTabs } from '@/components/analysis/analysis-tabs'
 import { ExportButton } from '@/components/table/export-button'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Input } from '@/components/ui/input'
 import Link from 'next/link'
-import { ArrowLeft, Save, Plus, Table2, Loader2 } from 'lucide-react'
+import { ArrowLeft, Save, Plus, Table2, Loader2, BarChart3 } from 'lucide-react'
 
 // Mock data for demonstration
 const mockTableData = {
@@ -32,6 +29,9 @@ const mockTableData = {
     { id: 'row-3', 'col-1': '2024-01-03', 'col-2': 'Widget A', 'col-3': 1800, 'col-4': 180, 'col-5': 'East' },
     { id: 'row-4', 'col-1': '2024-01-04', 'col-2': 'Widget C', 'col-3': 3200, 'col-4': 320, 'col-5': 'West' },
     { id: 'row-5', 'col-1': '2024-01-05', 'col-2': 'Widget B', 'col-3': 2100, 'col-4': 210, 'col-5': 'North' },
+    { id: 'row-6', 'col-1': '2024-01-06', 'col-2': 'Widget A', 'col-3': 1650, 'col-4': 165, 'col-5': 'South' },
+    { id: 'row-7', 'col-1': '2024-01-07', 'col-2': 'Widget C', 'col-3': 2800, 'col-4': 280, 'col-5': 'East' },
+    { id: 'row-8', 'col-1': '2024-01-08', 'col-2': 'Widget B', 'col-3': 2400, 'col-4': 240, 'col-5': 'West' },
   ],
   createdAt: new Date(),
   updatedAt: new Date(),
@@ -79,7 +79,7 @@ export default function TableDetailPage({ params }: { params: { id: string } }) 
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <Loader2 className="h-8 w-8 animate-spin text-gray-400" />
+        <Loader2 className="h-8 w-8 animate-spin text-indigo-600" />
       </div>
     )
   }
@@ -106,7 +106,7 @@ export default function TableDetailPage({ params }: { params: { id: string } }) 
                 rows={rows}
                 filename={tableName}
               />
-              <Button size="sm">
+              <Button size="sm" className="bg-indigo-600 hover:bg-indigo-700">
                 <Save className="h-4 w-4 mr-2" />
                 Save
               </Button>
@@ -132,15 +132,15 @@ export default function TableDetailPage({ params }: { params: { id: string } }) 
 
           {/* Main Tabs */}
           <Tabs defaultValue="table">
-            <TabsList>
-              <TabsTrigger value="table">
+            <TabsList className="bg-gray-100">
+              <TabsTrigger value="table" className="data-[state=active]:bg-white data-[state=active]:text-indigo-600">
                 <Table2 className="h-4 w-4 mr-2" />
                 Table
               </TabsTrigger>
-              <TabsTrigger value="statistics">Statistics</TabsTrigger>
-              <TabsTrigger value="charts">Charts</TabsTrigger>
-              <TabsTrigger value="pivot">Pivot</TabsTrigger>
-              <TabsTrigger value="ai">AI Analysis</TabsTrigger>
+              <TabsTrigger value="analysis" className="data-[state=active]:bg-white data-[state=active]:text-indigo-600">
+                <BarChart3 className="h-4 w-4 mr-2" />
+                Analysis
+              </TabsTrigger>
             </TabsList>
 
             <TabsContent value="table" className="mt-6">
@@ -157,26 +157,12 @@ export default function TableDetailPage({ params }: { params: { id: string } }) 
               </Card>
             </TabsContent>
 
-            <TabsContent value="statistics" className="mt-6">
-              <StatisticsPanel columns={columns} statistics={statistics} />
-            </TabsContent>
-
-            <TabsContent value="charts" className="mt-6">
-              <ChartBuilder columns={columns} rows={rows} />
-            </TabsContent>
-
-            <TabsContent value="pivot" className="mt-6">
-              <PivotTable columns={columns} rows={rows} />
-            </TabsContent>
-
-            <TabsContent value="ai" className="mt-6">
-              {tableData && (
-                <AIAnalyzer
-                  columns={columns}
-                  rows={rows}
-                  datasetName={tableName}
-                />
-              )}
+            <TabsContent value="analysis" className="mt-6">
+              <AnalysisTabs
+                columns={columns}
+                rows={rows}
+                statistics={statistics}
+              />
             </TabsContent>
           </Tabs>
         </div>

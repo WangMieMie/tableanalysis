@@ -38,7 +38,7 @@ export interface TableStatistics {
 }
 
 // Chart types
-export type ChartType = 'bar' | 'line' | 'pie' | 'scatter'
+export type ChartType = 'bar' | 'line' | 'pie' | 'scatter' | 'histogram' | 'boxPlot'
 
 export interface ChartConfig {
   type: ChartType
